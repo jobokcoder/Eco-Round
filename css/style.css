@@ -1,0 +1,17 @@
+:root{ --backColor: #fce900; --backShadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.05); --colorBlack: #333; --colorWhite: #fff; --borderColor: 1px solid rgb(248, 249, 250); }
+*{ margin: 0; padding: 0; box-sizing: border-box; list-style: none; font-family: 'Noto Sans KR', sans-serif; font-weight: 400; color: var(--colorBlack); background-color: transparent; border: none; outline: none; text-decoration: none; text-rendering: optimizeLegibility; }
+*::-webkit-scrollbar{ width: 4px; }
+*::-webkit-scrollbar-thumb{ background-color: turquoise; }
+.app{ position: relative; width: 100%; height: 100vh; display: flex; justify-content: center; align-items: center; background-color: var(--backColor); }
+.ecoRound{ display: flex; flex-direction: column; justify-content: center; align-items: center; }
+.ecoRound__logo{ width: 200px; filter: drop-shadow(4px 4px 1px rgba(0, 0, 0, 0.25)); }
+.ecoRound__logo--svg{ max-width: 100%;  }
+.ecoRound__form{ padding: 30px 20px; width: 300px; display: grid; grid-template-columns: 1fr; row-gap: 14px; background-color: var(--colorWhite); border-radius: 20px; box-shadow: var(--backShadow); }
+.ecoRound__form--input{ padding: 10px 14px; background-color: #ebebeb; border-radius: 14px; }
+.ecoRound__form--money{ position: relative; }
+.ecoRound__form--money::-webkit-outer-spin-button{ -webkit-appearance: none; }
+.ecoRound__form--money::-webkit-inner-spin-button{ -webkit-appearance: none; }
+.ecoRound__form--text{ width: 100%; text-align: center; font-size: 12px; font-weight: 400; }
+.ecoRound__form--text strong{ font-weight: 500; }
+.ecoRound__form--cal{ cursor: pointer; padding: 10px 14px; width: 100%; background-color: var(--colorBlack); border-radius: 10px; color: #fff; }
+.ecoRound__form--cal:hover{ transition: 300ms ease-in-out; background-color: #000; }
