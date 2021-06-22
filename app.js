@@ -11,7 +11,10 @@ const ecoRoundViewRetrunBtn = document.querySelector('.ecoRound__view--return');
 
 const tips = [
     '직장인의 평균 하루 용돈은 약 16,790원입니다.',
-    '남은 날짜는 계산한 당일 포함 날짜입니다.'
+    '직장인의 한달 평균 지출하는 약 50%는 식비입니다.',
+    '남은 날짜는 계산한 당일 포함 날짜입니다.',
+    '평균 대학생의 한달 생활비는 592,000원입니다.',
+    '평균 직장인의 한달 생활비는 1,160,000원입니다.'
 ];
 
 userMoney.addEventListener('keyup', (e) => { e.target.value = numberWithCommas(e.target.value); })
