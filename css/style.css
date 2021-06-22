@@ -6,7 +6,7 @@
 .ecoRound{ display: flex; flex-direction: column; justify-content: center; align-items: center; }
 .ecoRound__logo{ width: 200px; filter: drop-shadow(4px 4px 1px rgba(0, 0, 0, 0.25)); }
 .ecoRound__logo--svg{ max-width: 100%; overflow: visible; }
-.ecoRound__logo--svg-path{ animation: logoAnimation 4s ease-out forwards; stroke: #000; stroke-width: 2; stroke-dasharray: 2000; stroke-dashoffset: 2000; fill: none; }
+.ecoRound__logo--svg-path{ animation: logoAnimation 2s ease-in-out forwards; stroke: #000; stroke-width: 2; stroke-dasharray: 2000; stroke-dashoffset: 2000; fill: none; }
 .ecoRound__write{ padding: 30px 20px; width: 300px; display: grid; grid-template-columns: 1fr; row-gap: 14px; background-color: var(--colorWhite); border-radius: 20px; box-shadow: var(--backShadow); }
 .ecoRound__write{ animation: fadeUp 600ms ease-out forwards; opacity: 0; transform: translateY(10%); }
 .ecoRound__write--input{ padding: 10px 14px; background-color: #ebebeb; border-radius: 14px; }
@@ -20,7 +20,7 @@
 .ecoRound__tip--text strong{ font-weight: 700; }
 .ecoRound__write--cal{ cursor: pointer; padding: 10px 14px; width: 100%; background-color: var(--colorBlack); border-radius: 10px; color: #fff; }
 .ecoRound__write--cal:hover{ transition: 300ms ease-in-out; background-color: #000; }
-.ecoRound__view{ padding: 30px 20px; width: 300px; display: none; grid-template-columns: 1fr; row-gap: 10px; place-items: center; background-color: var(--colorWhite); border-radius: 20px; box-shadow: var(--backShadow); }
+.ecoRound__view{ padding: 30px 20px; min-width: 300px; display: none; grid-template-columns: 1fr; row-gap: 10px; place-items: center; background-color: var(--colorWhite); border-radius: 20px; box-shadow: var(--backShadow); }
 .ecoRound__view{ animation: fadeUp 600ms ease-out forwards; opacity: 0; transform: translateY(10%); }
 .ecoRound__view--ment{ font-size: 18px; font-weight: 500; font-style: normal; }
 .ecoRound__view--money{ padding: 10px 14px; border-radius: 10px; font-size: 28px; font-weight: 700; font-style: italic; color: #000; background-color: #ebebeb; }
