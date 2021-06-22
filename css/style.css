@@ -5,21 +5,36 @@
 .app{ position: relative; width: 100%; height: 100vh; display: flex; justify-content: center; align-items: center; background-color: var(--backColor); }
 .ecoRound{ display: flex; flex-direction: column; justify-content: center; align-items: center; }
 .ecoRound__logo{ width: 200px; filter: drop-shadow(4px 4px 1px rgba(0, 0, 0, 0.25)); }
-.ecoRound__logo--svg{ max-width: 100%;  }
+.ecoRound__logo--svg{ max-width: 100%; overflow: visible; }
+.ecoRound__logo--svg-path{ animation: logoAnimation 4s ease-out forwards; stroke: #000; stroke-width: 2; stroke-dasharray: 2000; stroke-dashoffset: 2000; fill: none; }
 .ecoRound__write{ padding: 30px 20px; width: 300px; display: grid; grid-template-columns: 1fr; row-gap: 14px; background-color: var(--colorWhite); border-radius: 20px; box-shadow: var(--backShadow); }
+.ecoRound__write{ animation: fadeUp 600ms ease-out forwards; opacity: 0; transform: translateY(10%); }
 .ecoRound__write--input{ padding: 10px 14px; background-color: #ebebeb; border-radius: 14px; }
 .ecoRound__write--money{ position: relative; }
 .ecoRound__write--money::-webkit-outer-spin-button{ -webkit-appearance: none; }
 .ecoRound__write--money::-webkit-inner-spin-button{ -webkit-appearance: none; }
 .ecoRound__write--text{ display: none; width: 100%; font-size: 12px; font-weight: 500; text-align: center; color: crimson; }
 .ecoRound__tip{ margin-top: 20px; }
+.ecoRound__tip{ animation: fadeUp 600ms ease-out forwards; opacity: 0; transform: translateY(10%); }
 .ecoRound__tip--text{ text-align: center; font-size: 14px; font-weight: 400; }
 .ecoRound__tip--text strong{ font-weight: 700; }
 .ecoRound__write--cal{ cursor: pointer; padding: 10px 14px; width: 100%; background-color: var(--colorBlack); border-radius: 10px; color: #fff; }
 .ecoRound__write--cal:hover{ transition: 300ms ease-in-out; background-color: #000; }
 .ecoRound__view{ padding: 30px 20px; width: 300px; display: none; grid-template-columns: 1fr; row-gap: 10px; place-items: center; background-color: var(--colorWhite); border-radius: 20px; box-shadow: var(--backShadow); }
+.ecoRound__view{ animation: fadeUp 600ms ease-out forwards; opacity: 0; transform: translateY(10%); }
 .ecoRound__view--ment{ font-size: 18px; font-weight: 500; font-style: normal; }
 .ecoRound__view--money{ padding: 10px 14px; border-radius: 10px; font-size: 28px; font-weight: 700; font-style: italic; color: #000; background-color: #ebebeb; }
 .ecoRound__view--days{ font-size: 18px; font-weight: 700; font-style: italic; color: #000; }
 .ecoRound__view--return{ cursor: pointer; padding: 10px 14px; width: 100%; background-color: var(--colorBlack); border-radius: 10px; color: #fff; }
 .ecoRound__view--return:hover{ transition: 300ms ease-in-out; background-color: #000; }
+
+@keyframes logoAnimation {
+    0%{ stroke-dashoffset: 2000; }
+    90%{ stroke-dashoffset: 0; fill: rgba(0, 0, 0, 0); }
+    100%{ stroke-dashoffset: 0; fill: rgba(0, 0, 0, 1); }
+}
+
+@keyframes fadeUp {
+    from{ opacity: 0; transform: translateY(10%); }
+    to{ opacity: 1; transform: translateY(0%); }
+}
